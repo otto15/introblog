@@ -1,0 +1,9 @@
+<h1><a href="#">DjblofRm</a></h1>
+{% for post in posts %}
+	<div>
+		<h2><a href="#">{{ post.title }}</a></h2>
+		<p>{{ post.author }}</p>
+		<p>{{ post.text|linebreaksbr }}</p>
+		<p>{{ post.published_date }}</p>
+	</div>
+{% endfor %}
