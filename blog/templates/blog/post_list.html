@@ -1,9 +1,14 @@
-<h1><a href="#">DjblofRm</a></h1>
+{% load static %}
+<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<div class="title"><h1><a href="#">Lorem blog</a></h1></div>
 {% for post in posts %}
-	<div>
-		<h2><a href="#">{{ post.title }}</a></h2>
-		<p>{{ post.author }}</p>
-		<p>{{ post.text|linebreaksbr }}</p>
+	<div class='posts'>
+		<h2><a href="#" class="post_title">{{ post.title }}</a></h2>
+		<div class="main_text"><p>{{ post.text|linebreaksbr }}</p></div>
 		<p>{{ post.published_date }}</p>
+		<p>{{ post.author }}</p>
 	</div>
 {% endfor %}
