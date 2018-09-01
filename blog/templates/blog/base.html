@@ -1,0 +1,10 @@
+{% load static %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Russo+One">
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+<div class="title"><h1><a href="{% url 'post_list' %}">Lorem blog</a></h1></div>
+{% block content %}
+{% endblock %}
+            
