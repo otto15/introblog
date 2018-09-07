@@ -1,10 +1,15 @@
 {% extends 'blog/base.html' %}
 {% block content %}
-	<div class='posts'>
-			<h2><a href="{% url 'post_detail' pk=post.pk %}" class="post_title">{{ post.title }}</a></h2>
+	<div class='posts' id="post">
+			<div class="p_title">
+				<h2><a href="{% url 'post_detail' pk=post.pk %}" class="post_title">{{ post.title }}</a></h2>
+			</div>
 			<div class="main_text">
 				<p>{{ post.text|linebreaksbr }}</p>
 			</div>
-			<p>{{ post.published_date }}</p>
-		</div>
+			<div class="foot_bin">
+				<p class="date">{{ post.published_date }}</p>
+			    <p class="author">{{ post.author }}</p>
+			</div>
+	</div>
 {% endblock %}
