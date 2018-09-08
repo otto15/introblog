@@ -44,6 +44,10 @@ body {
 	flex: 1 0 auto;
 }
 
+.main_text>p {
+	font-size: 17px;
+}
+
 .foot_bin {
 	flex: 1 0 auto;
 }

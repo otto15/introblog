@@ -7,7 +7,14 @@
 <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 
 <div class="wrap">
-	<div class="title"><h1><a href="{% url 'post_list' %}">Lorem blog</a></h1></div>
+	<div class="title">
+		<h1>
+			<a href="{% url 'post_list' %}">Lorem blog</a>
+		</h1>
+		{% if user.is_authenticated %}
+			<a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+		{% endif %}
+	</div>
 	<div class="post_list">	
 		{% block content %}
 		{% endblock %}
